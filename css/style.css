@@ -21,13 +21,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: rgb(252, 244, 244);
     width: 100%;
 }
 header.sticky
 {
     position: fixed;
-    background: white;
+    background: rgb(236, 231, 231);
     height: 70px;
     padding: 3% 12%;
    
