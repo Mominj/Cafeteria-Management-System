@@ -1,0 +1,137 @@
+@media only screen and (max-width: 1200px) {
+    header{
+        padding: 25px 10%; 
+    }
+  }
+
+
+  @media only screen and (max-width: 991px) {
+    header{
+        padding: 25px 5%; 
+    }
+    .navigation ul li a{
+        font-size: 14px;
+        letter-spacing: .1px;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home .imgbox1{
+        position: relative; 
+        width: 100%;
+        height: 35vh; 
+    }
+    .home .imgbox2{
+        width: 100%;
+        height: 50vh;
+    }
+    .home .imgbox2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    .home .imgbox1 .div-heading{
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+    .about{
+      padding: 5% 10%;
+    }
+    .menu .menu-slider .item{
+        position: relative;
+        margin: 0 1%;
+        width: 47%;
+        height: 380px;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+    
+     }
+     .expert-details{
+        padding: 0 5%; 
+        flex-wrap: wrap;
+    }
+    .expert .expert-details .expert-box{
+        position: relative;
+        width: 500px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 7px;
+      }
+
+}
+
+  @media only screen and (max-width: 750px) {
+
+    header{
+        padding: 20px 2%; 
+    }
+    .navigation{
+        display: none;
+    }
+    .menu-bar{
+         display: block;
+         background: url(/img/bar.png);
+         width: 40px;
+         height: 40px;
+         background-size: 30px;
+         background-repeat: no-repeat;
+         background-position: center;
+         cursor: pointer;
+         color: black;
+         transition: all .3s ease;
+        
+    }
+    .menu-bar.active
+    {
+      background: url(/img/close.png);
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: black;
+    }
+    .navigation.active
+    {
+      width: 100%;
+      height: 60%;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      z-index: 3452345;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column; 
+    }
+    .navigation ul li a{
+        font-size: 28px;
+    }
+    .about{
+       flex-direction: column;
+      }
+      .about .content-right{
+        margin-left: 0;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .menu .menu-slider .item{
+        position: relative;
+        margin: 0 1%;
+        width: 98%;
+        max-height: 380px;
+        margin: 10px;
+        justify-content: center;
+     }
+     .menu .menu-slider .item:hover > .item-description{
+        height: 220px;
+     }
+
+
+  }
