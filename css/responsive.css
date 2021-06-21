@@ -53,13 +53,13 @@
         padding: 0 5%; 
         flex-wrap: wrap;
     }
-    .expert .expert-details .expert-box{
+.expert-box{
         position: relative;
         width: 500px;
         margin-right: 0;
         margin-bottom: 20px;
         padding: 7px;
-      }
+    }
 
 }
 
