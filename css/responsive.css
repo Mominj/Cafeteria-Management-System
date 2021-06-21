@@ -60,6 +60,28 @@
         margin-bottom: 20px;
         padding: 7px;
     }
+    .contact{
+        height: 90vh;
+        width: 100%;
+        padding: 4% 6%;
+        flex-direction: column;
+    }
+    .contact .contact-left{
+        margin-right: 0;
+        margin-bottom: 40px;
+
+    }
+    .contact .contact-form{
+        background:white;
+        height: 100%;
+        width: 98%;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 35px 25px;
+        position: relative;
+    }
 
 }
 
@@ -132,6 +154,32 @@
      .menu .menu-slider .item:hover > .item-description{
         height: 220px;
      }
+
+     .left-content li {
+
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    }
+    .right-content p{
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+       }
+       .contact .contact-left  .card{
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .contact{
+        height: 110vh;
+    }
+    .contact .contact-left  .card .card-data{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
 
 
   }
