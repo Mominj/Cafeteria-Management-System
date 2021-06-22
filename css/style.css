@@ -35,7 +35,7 @@ header.sticky
 header > a{
     color: black;
 }
-header.sticky > a{
+header > a.sticky{
     color: black;
 }
 
@@ -47,11 +47,6 @@ header .navigation ul li a.sticky{
     font-size: 15px;
     letter-spacing: .5px;
 }
-header .nav ul li a.sticky:hover{
-    color: brown;
-    border-bottom: 2px solid orange;
-} 
-
 .logo{
     color: #fff;
     font-size: 20px;
@@ -68,6 +63,7 @@ header .nav ul li a.sticky:hover{
 .navigation ul li{
     list-style: none;
     display: inline-block;
+    position: relative;
 }
 .navigation  ul li a{
     text-decoration: none;
@@ -77,16 +73,43 @@ header .nav ul li a.sticky:hover{
     font-size: 15px;
     letter-spacing: .5px;
 }
-.navigation ul li a:hover{
+/* .navigation ul li a:hover{
     color: orangered;
-}
+    border-top: 1px solid red;
+} */
 .menu-bar{
     display: none;
 }
-.navigation ul li .active{
-    color: orangered;
+
+.dropdwon{
+    position: absolute;
+    list-style: none;
+    top: 50px;
+    left:0;
+    visibility: hidden;
+    transition: .3s;
+}
+.dropdwon li{
+     list-style: none;
+     padding: 10px 20px;
+     background-color: rgb(252, 244, 244);;
 }
 
+.dropdwon li a{
+    text-decoration: none;
+    color:green;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .5px;
+ 
+}
+
+.navigation ul li a:hover{
+    color: #fb5849;
+}
+.navigation ul li:hover .dropdwon{
+    visibility: visible;
+}
 
 /*
 
@@ -269,7 +292,7 @@ Home
 .menu .menu-slider .item{
    position: relative;
    margin: 0 1%;
-   width: 23%;
+   width: 100%;
    height: 380px;
 }
 .menu .menu-slider .item:hover > .item-description{
@@ -317,9 +340,9 @@ Home
 }
 
 .menu .menu-slider .item  .item-description h3{
-color: white;
-font-size: 25px;
-padding: 10px 0;
+    color: white;
+    font-size: 25px;
+    padding: 10px 0;
 }
 .menu .menu-slider .item  .item-description p{
     color: white;
@@ -646,7 +669,17 @@ footer{
     background:#fb5849;
     margin-left: 10px;
  }
+ .owl-dot{
+    visibility: hidden;
 
+}
+.disabled{ 
+    justify-content: center;
+    align-items: center;
+     text-align: center;  
+     font-size: 50px;
+     color: red;
+}
 
 
 

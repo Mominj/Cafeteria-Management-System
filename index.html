@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Template</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+   
 
-
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.css"> 
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel=”stylesheet” href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css”>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,900;1,200;1,500&display=swap" rel="stylesheet">
@@ -28,18 +31,26 @@
         <div class="menu-bar" onclick="toggleMenu()"> </div>
         <div class="navigation">
             <ul class="nav">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Chef</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#home" onclick="toggleMenu();" class="active">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+                <li><a href="#expert" onclick="toggleMenu();">Chef</a></li>
+                <li><a href="#" class="drop">Features
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                  <ul class="dropdwon">
+                      <li><a href="#">Dropdown</a></li>
+                      <li><a href="#">Dropdown</a></li>
+                      <li><a href="#">Dropdown</a></li>
+                  </ul>
+                </li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
             </ul>
         </div>
     </header>
 
 
-    <div class="home">
+    <div class="home" id="home">
        <div class="imgbox1">
             <div class="div-heading">
                 <h1> KlassyCale</h2>
@@ -55,7 +66,7 @@
     </div>
 
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="content-left">
             <div class="data">
                 <h2>About us</h2>
@@ -85,12 +96,12 @@
         </div>
     </section>
 
-    <section class="menu">
+    <section class="menu" id="menu">
         <div class="menu-heading">
             <h2>OUR MENU</h2>
             <h1>Our selection of    cakes <br> with   quality taste</h1>
         </div>
-        <div class="menu-slider">
+        <div class="menu-slider owl-carousel owl-theme">
             <div class="item">
                 <div class="item-img">
                     <img src="/img/menu-item-01.jpg" alt="">
@@ -159,7 +170,7 @@
 
 
 
-    <section class="expert">
+    <section class="expert" id="expert">
         <div class="expert-heading">
             <h2>OUR CHEFS</h2>
             <h1>We offer the best  <br> ingredients for you</h1>
@@ -216,7 +227,7 @@
     
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-left">
             <div class="data">
                 <h2>CONTACT US</h2>
@@ -264,7 +275,7 @@
     </section>
 
 
-    <footer>
+    <footer id="footer">
         <div class="left-content">
                 <li><a href="#"><img src="/img/iconfinder_834708_twitter_icon_512px.png" alt=""></a></li>
                 <li><a href="#"><img src="/img/iconfinder_834722_facebook_icon_512px.png" alt=""></a></li>
@@ -277,9 +288,61 @@
 
     </footer>
 
-  
-
-
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="/js/owl.carousel.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+    <script>
+        $('.menu-slider').owlCarousel({
+            // loop:true,
+            // margin:20,
+            // // nav:true,
+            // responsiveClass:true,
+            // autoplay: true,
+            //    responsive:{
+            //     0:{
+            //         items:1,
+            //         nav:true
+            //     },
+            //     100:{
+            //         items:2,
+            //         nav:false
+            //     },
+            //     200:{
+            //         items:3,
+            //         nav:true
+            //     },
+            //     300:{
+            //         items:4,
+            //         nav:false
+            //     },
+            //     400:{
+            //         items:5,
+            //         nav:false
+            //     }
+            // }
+            loop:true,
+            margin:10,
+            autoplay:true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                
+                }
+            }
+        })
+    </script>
   
 
 
@@ -292,7 +355,7 @@
           
           window.addEventListener('scroll',function(){
           const header = document.querySelector('header');
-          header.classList.toggle("sticky",window.scrollY > 1);
+          header.classList.toggle("sticky",window.scrollY > 0);
          })
 
           function toggleMenu(){
